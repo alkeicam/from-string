@@ -9,6 +9,10 @@
     "packem": "./node_modules/webpack/bin/webpack.js",
     "remote-publish-patch": "npm install && npm update && npm run coverage && npm run packem && git commit -am 'wip' && npm version patch && npm publish && git push origin && git push origin --tags"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/alkeicam/from-string.git"
+  },
   "keywords": [
     "string",
     "parse",
