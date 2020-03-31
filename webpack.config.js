@@ -7,7 +7,7 @@ module.exports = {
     entry: './src/index.js',
     mode: 'production',
     output: {
-        filename: 'aihub.js', // <-- Important
+        filename: 'from-string.js', // <-- Important
         path: path.resolve(__dirname, 'dist'),
         // ,
         // libraryTarget: 'this' // <-- Important
