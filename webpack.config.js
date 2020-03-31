@@ -17,8 +17,6 @@ module.exports = {
     },
     resolve: {
         extensions: [ '.js' ]
-    },
-    
-
+    },    
     externals: [nodeExternals({})] // <-- Important
 };
