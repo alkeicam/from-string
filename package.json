@@ -1,6 +1,6 @@
 {
   "name": "from-string",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple string to javascript array/number/string parser",
   "main": "./src/index.js",
   "scripts": {
