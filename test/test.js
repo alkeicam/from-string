@@ -31,6 +31,9 @@ describe('from-string parser', () => {
         it('String parse', () => {
             return expect(theModule.parse("testing one two three")).eq("testing one two three");
         })
+        it('String parse 2', () => {
+            return expect(theModule.parse("testing one's two three")).eq("testing one's two three");
+        })
         it('Undefined parse', () => {
             return expect(theModule.parse(undefined)).is.undefined;
         })
@@ -42,6 +45,18 @@ describe('from-string parser', () => {
         })
         it('Array parse 2', () => {
             return expect(theModule.parse('[1,2,3]')[1]).eq(2);
+        })
+        it('Array parse 3', () => {
+            return expect(theModule.parse('["a","b","c"]')[1]).eq("b");
+        })
+        it('Array parse 4', () => {
+            return expect(theModule.parse('["accuracy"]')[0]).eq("accuracy");
+        })
+        it('Array parse 5', () => {
+            return expect(theModule.parse('[\'accuracy\']')[0]).eq("accuracy");
+        })
+        it('Array parse 6', () => {
+            return expect(theModule.parse('[\'accuracy\',\'b\']')[1]).eq("b");
         })
 
         

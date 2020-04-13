@@ -10,7 +10,14 @@ class FromStringParser {
         try {
             result = JSON.parse(stringValue);
         } catch (e) {
-            // if we cant parse with json then we assume that this is a string            
+            // fallback
+            // lets try to change all ' to " just in case this is an array of form ['a','b'] instead of ["a","b"]
+            var changed = stringValue.replace(/'/g,'"');
+            try{
+                result = JSON.parse(changed);
+            } catch(e2){
+                // if we cant parse with json then we assume that this is a string  
+            }            
         }
         // next the value might be a number so we try to convert to number
         var possiblyNumber = Number(result);
