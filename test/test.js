@@ -58,6 +58,24 @@ describe('from-string parser', () => {
         it('Array parse 6', () => {
             return expect(theModule.parse('[\'accuracy\',\'b\']')[1]).eq("b");
         })
+        it('Boolean parse false', () => {
+            return expect(theModule.parse('false')).false;
+        })
+        it('Boolean parse false', () => {
+            return expect(theModule.parse('False')).false;
+        })
+        it('Boolean parse false', () => {
+            return expect(theModule.parse('FALSE')).false;
+        })
+        it('Boolean parse true', () => {
+            return expect(theModule.parse('true')).true;
+        })
+        it('Boolean parse true', () => {
+            return expect(theModule.parse('True')).true;
+        })
+        it('Boolean parse true', () => {
+            return expect(theModule.parse('TRUE')).true;
+        })
 
         
     })        

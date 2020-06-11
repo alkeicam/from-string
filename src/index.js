@@ -19,6 +19,12 @@ class FromStringParser {
                 // if we cant parse with json then we assume that this is a string  
             }            
         }
+        // before turning to numbers check if maybe the value is a boolean true/false
+        var isTrue = (stringValue.toLowerCase() === 'true');
+        var isFalse = (stringValue.toLowerCase() === 'false');
+        if(isFalse||isTrue){
+            return isTrue ? true : false;
+        }
         // next the value might be a number so we try to convert to number
         var possiblyNumber = Number(result);
         if (!Number.isNaN(possiblyNumber)) {
