@@ -9,7 +9,7 @@
 from-string allows to change string representations of arrays, numbers, booleans into its corresponding values. I.e. having "2" it will result with 2 returned.
 
 
-### parse(stringValue)
+### function: parse(stringValue)
 ```javascript
 var number2  = theModule.parse("2");
 var number222  = theModule.parse("2.22");
