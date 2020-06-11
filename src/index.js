@@ -20,8 +20,8 @@ class FromStringParser {
             }            
         }
         // before turning to numbers check if maybe the value is a boolean true/false
-        var isTrue = (stringValue.toLowerCase() === 'true');
-        var isFalse = (stringValue.toLowerCase() === 'false');
+        var isTrue = (typeof stringValue =='string' && stringValue.toLowerCase() === 'true');
+        var isFalse = (typeof stringValue =='string' && stringValue.toLowerCase() === 'false');
         if(isFalse||isTrue){
             return isTrue ? true : false;
         }

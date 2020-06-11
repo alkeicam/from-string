@@ -22,8 +22,14 @@ describe('from-string parser', () => {
         it('Integer parse', () => {
             return expect(theModule.parse("2")).eq(2);
         })
+        it('Integer parse 2', () => {
+            return expect(theModule.parse(2)).eq(2);
+        })
         it('Float parse', () => {
             return expect(theModule.parse("2.2")).eq(2.2);
+        })
+        it('Float parse 2', () => {
+            return expect(theModule.parse(2.2)).eq(2.2);
         })
         it('Float parse (2)', () => {
             return expect(theModule.parse(".2")).eq(0.2);
